@@ -1,35 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msegal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 12:06:43 by msegal            #+#    #+#             */
-/*   Updated: 2020/01/11 13:23:38 by msegal           ###   ########.fr       */
+/*   Created: 2020/01/11 14:58:58 by msegal            #+#    #+#             */
+/*   Updated: 2020/01/11 17:27:29 by msegal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_recursive_factorial(int nb)
+int		ft_fibonacci(int index)
 {
-	if (nb >= 0)
+	if (index == 0)
+		return (0);
+	else
 	{
-		if (nb <= 1)
+		if (index == 1)
 			return (1);
 		else
-		{
-			nb *= ft_recursive_factorial(nb - 1);
-			return (nb);
-		}
+			return ft_fibonacci(index - 1) + ft_fibonacci(index - 2);
 	}
-	else
-		return (0);
 }
 
 int		main(void)
 {
-	printf("Factorial: %d\n", ft_recursive_factorial(-10));
+	int i;
+	int fib;
+	int n;
+
+	n = 5;
+	i = 0;
+	while (i <= n)
+	{
+		fib = ft_fibonacci(i);
+		if (ft_fibonacci(i) == n)
+			printf("%d\n", fib);
+		else
+			printf("%d, ", fib);
+		i++;
+	}
 	return (0);
 }
