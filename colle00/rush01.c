@@ -6,7 +6,7 @@
 /*   By: msegal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 22:17:53 by msegal            #+#    #+#             */
-/*   Updated: 2020/01/12 14:49:15 by msegal           ###   ########.fr       */
+/*   Updated: 2020/01/12 16:37:03 by msegal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	ft_putchar(char c);
 
-int		horizontal_line_top(int x)
+int		horizontal_line(int x)
 {
 	int hori_lines;
 	int i;
@@ -25,7 +25,7 @@ int		horizontal_line_top(int x)
 	else if (x == 1)
 		return (write(1, "/\n", 2));
 	else if (x == 2)
-		return (write(1, "/\\\n", 5));
+		return (write(1, "/\\\n", 3));
 	else
 	{
 		i = 0;
@@ -52,7 +52,7 @@ int		horizontal_line_bottom(int x)
 	else if (x == 1)
 		return (write(1, "\\\n", 2));
 	else if (x == 2)
-		return (write(1, "\\\n", 3));
+		return (write(1, "\\/\n", 3));
 	else
 	{
 		i = 0;
@@ -105,10 +105,12 @@ int		rush(int x, int y)
 	if (x == 1 && y == 1)
 		return (write(1, "/\n", 2));
 	else if (y == 1)
-		return (horizontal_line_top(x));
+		return (horizontal_line(x));
+	else if (x <= 0 || y <= 0)
+		return (write(1, "Please input a number greater or equal to 1\n", 44));
 	else
 	{
-		box = horizontal_line_top(x);
+		box = horizontal_line(x);
 		while (i < y)
 		{
 			box += vertical_line(x);

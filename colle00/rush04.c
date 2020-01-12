@@ -6,7 +6,7 @@
 /*   By: mejacob <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/12 13:57:20 by mejacob           #+#    #+#             */
-/*   Updated: 2020/01/12 14:55:08 by msegal           ###   ########.fr       */
+/*   Updated: 2020/01/12 16:37:40 by msegal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,8 @@ int		rush(int x, int y)
 		return (write(1, "A\n", 2));
 	else if (y == 1)
 		return (horizontal_line(x));
+	else if (x <= 0 || y <= 0)
+		return (write(1, "Please input a number greater or equal to 1\n", 44));
 	else
 	{
 		box = horizontal_line(x);
