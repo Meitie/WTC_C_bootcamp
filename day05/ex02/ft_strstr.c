@@ -6,7 +6,7 @@
 /*   By: msegal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 14:25:39 by msegal            #+#    #+#             */
-/*   Updated: 2020/01/13 21:18:38 by msegal           ###   ########.fr       */
+/*   Updated: 2020/01/13 22:09:21 by msegal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,17 @@ char	*ft_strstr(char *str, char *to_find)
 	int x;
 
 	i = 0;
-
- 	 if (!to_find[0])
+ 	if (to_find == '\0')
 		return (str);
-
 	while (str[i] != '\0')
 	{
-		if (str[i] == to_find[0])
-		{
-			x = 1;
-			while (str[i + x] == to_find[x])
-				i++;
-			if (to_find[x] == '\0')
-				return (str +i);
+		x = 0;
+		while (str[i + x] == to_find[x] && str[i + x] != '\0')
+		{	
+			if (to_find[x + 1] == '\0')
+				return (&str[i]);
+			x++;
 		}
-		x++;
 		i++;
 	}
 	return (0);
@@ -40,6 +36,5 @@ char	*ft_strstr(char *str, char *to_find)
 
 int		main(void)
 {
-	printf("%s", ft_strstr("hello world", "w"));
-	return (0);
+	printf("%s", ft_strstr("hello there world", "there"));
 }
