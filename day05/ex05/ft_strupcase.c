@@ -21,7 +21,7 @@ char	*ft_strupcase(char *str)
 	upper_case = str;
 	while (str[i] != '\0')
 	{
-		if (str[i] > 97 && str[i] < 122)
+		if (str[i] >= 97 && str[i] <= 122)
 		{
 			upper_case[i] = str[i] - 32;
 		}
