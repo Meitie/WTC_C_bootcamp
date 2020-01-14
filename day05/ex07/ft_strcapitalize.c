@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 char	*ft_strcapitalize(char *str)
 {
 	int		i;
@@ -26,4 +28,10 @@ char	*ft_strcapitalize(char *str)
 		i++;
 	}
 	return (cap_let);
+}
+
+int	main(void)
+{
+	char	greet[20] = "I am 9 years old";
+	printf("%s", ft_strcapitalize(greet));
 }
