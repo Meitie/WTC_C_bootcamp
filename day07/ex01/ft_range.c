@@ -35,5 +35,8 @@ int		*ft_range(int min, int max)
 
 int		main(void)
 {
-	ft_range(3, 10);
+	char	*tmp;
+
+	tmp = ft_range(3, 10);
+	free(tmp);
 }
