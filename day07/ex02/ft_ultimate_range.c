@@ -17,8 +17,8 @@ int		ft_ultimate_range(int **range, int min, int max)
 	int *deref_r;
 	int i;
 
-	deref_r = *range;
 	i = 0;
+	deref_r = *range;
 	if (min >= max)
 		return (NULL);
 	if (!(deref_r = (int *)malloc((max - min) * sizeof(int))))
@@ -29,13 +29,20 @@ int		ft_ultimate_range(int **range, int min, int max)
 		min++;
 		i++;
 	}
+	return (deref_r);
 }
 
 int		main(void)
 {
-	int *range = {6,7,8,9,10};
+    int **range;
+    int *range1;
+    int range2;
 	int min = 5;
 	int max = 10;
-	
-	ft_ultimate_range(&range, min, max);
+
+	range2 = 5;
+	range2 = *range1;
+	**range = *range1;
+	printf("%d", ft_ultimate_range(**range, min, max));
+
 }
