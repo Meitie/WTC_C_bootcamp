@@ -6,7 +6,7 @@
 /*   By: msegal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 10:02:52 by msegal            #+#    #+#             */
-/*   Updated: 2020/01/16 11:11:44 by msegal           ###   ########.fr       */
+/*   Updated: 2020/01/16 11:12:59 by msegal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,4 @@ void	ft_takes_place(int hour)
 		next_hour -= 12;
 	printf("THE FOLLOWING TAKES PLACE BETWEEN %d.00 %s AND %d.00 %s\n" \
 			, hour, time_of_day, next_hour, time_of_day_2);
-}
-
-int		main(void)
-{
-	ft_takes_place(11);
-	return (0);
 }

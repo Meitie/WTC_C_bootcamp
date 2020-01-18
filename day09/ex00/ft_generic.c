@@ -6,7 +6,7 @@
 /*   By: msegal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 09:29:12 by msegal            #+#    #+#             */
-/*   Updated: 2020/01/16 09:35:35 by msegal           ###   ########.fr       */
+/*   Updated: 2020/01/16 09:37:38 by msegal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,4 @@
 void	ft_generic(void)
 {
 	write(1, "Tu tu tu tu ; Tu tu tu tu\n", 26);
-}
-
-int		main(void)
-{
-	ft_generic();
-	return (0);
 }

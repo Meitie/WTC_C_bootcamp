@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rot42.c                                         :+:      :+:    :+:   */
+/*   ft_generic.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msegal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/16 13:34:17 by msegal            #+#    #+#             */
-/*   Updated: 2020/01/16 19:19:53 by msegal           ###   ########.fr       */
+/*   Created: 2020/01/17 08:03:25 by msegal            #+#    #+#             */
+/*   Updated: 2020/01/17 08:03:32 by msegal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_rot42(char *str)
-{
-	int i;
+#include <unistd.h>
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= 'a' && str[i] <= 'j') ||\
-			(str[i] >= 'A' && str[i] <= 'J'))
-			str[i] += 16;
-		else if ((str[i] >= 'k' && str[i] <= 'z') ||\
-			(str[i] >= 'K' && str[i] <= 'Z'))
-			str[i] -= 10;
-		i++;
-	}
-	return (str);
+void	ft_generic(void)
+{
+	write(1, "Tu tu tu tu ; Tu tu tu tu\n", 26);
 }

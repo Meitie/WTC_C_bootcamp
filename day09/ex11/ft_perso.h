@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rot42.c                                         :+:      :+:    :+:   */
+/*   ft_perso.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msegal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/16 13:34:17 by msegal            #+#    #+#             */
-/*   Updated: 2020/01/16 19:19:53 by msegal           ###   ########.fr       */
+/*   Created: 2020/01/17 01:37:27 by msegal            #+#    #+#             */
+/*   Updated: 2020/01/17 05:54:26 by msegal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_rot42(char *str)
-{
-	int i;
+#ifndef FT_PERSO_H
+# define FT_PERSO_H
+# define SAVE_AUSTIN_POWERS 0;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= 'a' && str[i] <= 'j') ||\
-			(str[i] >= 'A' && str[i] <= 'J'))
-			str[i] += 16;
-		else if ((str[i] >= 'k' && str[i] <= 'z') ||\
-			(str[i] >= 'K' && str[i] <= 'Z'))
-			str[i] -= 10;
-		i++;
-	}
-	return (str);
-}
+typedef	struct	s_perso
+{
+	char	*name;
+	int		life;
+	int		age;
+	int		profession;
+}				t_perso;
+
+#endif
