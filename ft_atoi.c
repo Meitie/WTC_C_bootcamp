@@ -19,7 +19,7 @@ int ft_atoi(char *str)
     }
     while (str[i] >= '0' && str[i] <= '9')
     {
-        nb = (str[i] * 10) + (str[i] - '0');
+        nb = (nb * 10) + (str[i] - '0');
         i++;
     }
     return (nb * neg);
